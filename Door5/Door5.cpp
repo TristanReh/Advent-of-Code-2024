@@ -24,7 +24,7 @@ int fixArray(std::vector<int> dataSet, std::vector<int> dataLeft, std::vector<in
     for (int j = 0; j < dataSet.size(); j++) {
         for (int k = 0; k < dataLeft.size(); k++) {
             if (dataSet[j] == dataLeft[k]) {
-                for (int l = j; l >= 0; l--) {
+                for (int l = j - 1; l >= 0; l--) {
                     if (dataSet[l] == dataRight[k]) {
                         dataSet[l] = dataLeft[k];
                         dataSet[j] = dataRight[k];
